@@ -7,6 +7,7 @@ bind {{ redis_bind_interface }}
 
 {% if redis_unixsocket %}
 unixsocket {{ redis_unixsocket }}
+unixsocketperm 775
 {% endif %}
 
 timeout {{ redis_timeout }}
